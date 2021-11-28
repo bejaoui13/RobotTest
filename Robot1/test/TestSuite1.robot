@@ -22,8 +22,8 @@ SimpleLoginTest
 
      input text     name=txtPassword        ${LOGINDATA}[password]
      click button   name=Submit
-   # click element  id=welcome       
-   # click element  link=Logout
+     click element  id=welcome       
+     click element  link=Logout
      log  test completed
      log  this test excecuted by %{username} and SO %{os}
 
