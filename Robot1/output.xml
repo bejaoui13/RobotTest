@@ -1,87 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.2 (Python 3.7.7 on win32)" generated="20211128 10:05:25.787" rpa="false" schemaversion="2">
-<suite id="s1" name="Robot1" source="D:\eclipse-work\Robot1">
-<suite id="s1-s1" name="Test" source="D:\eclipse-work\Robot1\test">
-<suite id="s1-s1-s1" name="TestSuite1" source="D:\eclipse-work\Robot1\test\TestSuite1.robot">
-<test id="s1-s1-s1-t1" name="MyFirstTest">
-<kw name="Log" library="BuiltIn">
-<arg>Heloo world</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211128 10:05:26.748" level="INFO">Heloo world</msg>
-<status status="PASS" starttime="20211128 10:05:26.747" endtime="20211128 10:05:26.748"/>
-</kw>
-<status status="PASS" starttime="20211128 10:05:26.745" endtime="20211128 10:05:26.749"/>
-</test>
-<test id="s1-s1-s1-t2" name="SimpleLoginTest">
+<robot generator="Robot 4.1.2 (Python 3.7.7 on win32)" generated="20211130 22:15:40.331" rpa="false" schemaversion="2">
+<suite id="s1" name="Robot1" source="C:\Users\islem.DESKTOP-TJTR8G5\git\RobotTest\Robot1">
+<suite id="s1-s1" name="Test" source="C:\Users\islem.DESKTOP-TJTR8G5\git\RobotTest\Robot1\test">
+<suite id="s1-s1-s1" name="Testcases" source="C:\Users\islem.DESKTOP-TJTR8G5\git\RobotTest\Robot1\test\testcases">
+<suite id="s1-s1-s1-s1" name="Alerte" source="C:\Users\islem.DESKTOP-TJTR8G5\git\RobotTest\Robot1\test\testcases\Alerte.robot">
+<test id="s1-s1-s1-s1-t1" name="TestAlert">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
+<arg>http://testautomationpractice.blogspot.com/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20211128 10:05:26.753" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20211128 10:05:26.752" endtime="20211128 10:05:39.565"/>
+<msg timestamp="20211130 22:15:40.921" level="INFO">Opening browser 'chrome' to base url 'http://testautomationpractice.blogspot.com/'.</msg>
+<status status="PASS" starttime="20211130 22:15:40.920" endtime="20211130 22:15:49.509"/>
 </kw>
-<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
-<arg>1</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20211128 10:05:39.566" endtime="20211128 10:05:39.607"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="HTML9"]/div[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211130 22:15:49.515" level="INFO">Clicking element 'xpath=//*[@id="HTML9"]/div[1]/button'.</msg>
+<status status="PASS" starttime="20211130 22:15:49.512" endtime="20211130 22:15:49.686"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name=txtUsername</arg>
-<arg>${LIST}[0]</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211128 10:05:39.610" level="INFO">Typing text 'Admin' into text field 'name=txtUsername'.</msg>
-<status status="PASS" starttime="20211128 10:05:39.608" endtime="20211128 10:05:39.877"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211130 22:15:52.691" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20211130 22:15:49.688" endtime="20211130 22:15:52.691"/>
 </kw>
-<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
-<arg>0</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20211128 10:05:39.878" endtime="20211128 10:05:39.882"/>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<arg>dimiss</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20211130 22:15:52.696" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg timestamp="20211130 22:15:52.715" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Alert Text: Press a button!
+Message: unexpected alert open: {Alert text : Press a button!}
+  (Session info: chrome=85.0.4183.121)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00B0D383+3134339]
+	Ordinal0 [0x009FA171+2007409]
+	Ordinal0 [0x0089AEE8+569064]
+	Ordinal0 [0x00848AEE+232174]
+	Ordinal0 [0x0083EB0B+191243]
+	Ordinal0 [0x00822E77+77431]
+	Ordinal0 [0x00823E3E+81470]
+	Ordinal0 [0x00823DC9+81353]
+	Ordinal0 [0x00A10CD9+2100441]
+	GetHandleVerifier [0x00C7B75A+1396954]
+	GetHandleVerifier [0x00C7B3D9+1396057]
+	GetHandleVerifier [0x00C87126+1444518]
+	GetHandleVerifier [0x00C7BCE8+1398376]
+	Ordinal0 [0x00A07F51+2064209]
+	Ordinal0 [0x00A122EB+2106091]
+	Ordinal0 [0x00A12411+2106385]
+	Ordinal0 [0x00A249C4+2181572]
+	BaseThreadInitThunk [0x76828494+36]
+	RtlAreBitsSet [0x779741C8+136]
+	RtlAreBitsSet [0x77974198+88]
+</msg>
+<msg timestamp="20211130 22:15:52.721" level="FAIL">ValueError: Invalid alert action 'DIMISS'.</msg>
+<status status="FAIL" starttime="20211130 22:15:52.692" endtime="20211130 22:15:52.722"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name=txtPassword</arg>
-<arg>${LOGINDATA}[password]</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20211128 10:05:39.885" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
-<status status="PASS" starttime="20211128 10:05:39.883" endtime="20211128 10:05:40.167"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name=Submit</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20211128 10:05:40.170" level="INFO">Clicking button 'name=Submit'.</msg>
-<status status="PASS" starttime="20211128 10:05:40.168" endtime="20211128 10:05:44.784"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>test completed</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211128 10:05:44.787" level="INFO">test completed</msg>
-<status status="PASS" starttime="20211128 10:05:44.785" endtime="20211128 10:05:44.787"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>this test excecuted by %{username} and SO %{os}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20211128 10:05:44.791" level="INFO">this test excecuted by islem and SO Windows_NT</msg>
-<status status="PASS" starttime="20211128 10:05:44.789" endtime="20211128 10:05:44.791"/>
-</kw>
-<status status="PASS" starttime="20211128 10:05:26.751" endtime="20211128 10:05:44.793"/>
+<status status="FAIL" starttime="20211130 22:15:40.917" endtime="20211130 22:15:52.724">ValueError: Invalid alert action 'DIMISS'.</status>
 </test>
-<status status="PASS" starttime="20211128 10:05:26.133" endtime="20211128 10:05:44.796"/>
+<status status="FAIL" starttime="20211130 22:15:40.474" endtime="20211130 22:15:52.734"/>
 </suite>
-<status status="PASS" starttime="20211128 10:05:26.120" endtime="20211128 10:05:44.806"/>
+<status status="FAIL" starttime="20211130 22:15:40.465" endtime="20211130 22:15:52.742"/>
 </suite>
-<status status="PASS" starttime="20211128 10:05:26.032" endtime="20211128 10:05:44.812"/>
+<status status="FAIL" starttime="20211130 22:15:40.455" endtime="20211130 22:15:52.752"/>
+</suite>
+<status status="FAIL" starttime="20211130 22:15:40.390" endtime="20211130 22:15:52.768"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Robot1">Robot1</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1" name="Test">Robot1.Test</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="TestSuite1">Robot1.Test.TestSuite1</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robot1">Robot1</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test">Robot1.Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Testcases">Robot1.Test.Testcases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Alerte">Robot1.Test.Testcases.Alerte</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20211130 22:15:52.715" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Alert Text: Press a button!
+Message: unexpected alert open: {Alert text : Press a button!}
+  (Session info: chrome=85.0.4183.121)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00B0D383+3134339]
+	Ordinal0 [0x009FA171+2007409]
+	Ordinal0 [0x0089AEE8+569064]
+	Ordinal0 [0x00848AEE+232174]
+	Ordinal0 [0x0083EB0B+191243]
+	Ordinal0 [0x00822E77+77431]
+	Ordinal0 [0x00823E3E+81470]
+	Ordinal0 [0x00823DC9+81353]
+	Ordinal0 [0x00A10CD9+2100441]
+	GetHandleVerifier [0x00C7B75A+1396954]
+	GetHandleVerifier [0x00C7B3D9+1396057]
+	GetHandleVerifier [0x00C87126+1444518]
+	GetHandleVerifier [0x00C7BCE8+1398376]
+	Ordinal0 [0x00A07F51+2064209]
+	Ordinal0 [0x00A122EB+2106091]
+	Ordinal0 [0x00A12411+2106385]
+	Ordinal0 [0x00A249C4+2181572]
+	BaseThreadInitThunk [0x76828494+36]
+	RtlAreBitsSet [0x779741C8+136]
+	RtlAreBitsSet [0x77974198+88]
+</msg>
 </errors>
 </robot>
